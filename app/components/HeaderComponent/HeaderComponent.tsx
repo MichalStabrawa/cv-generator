@@ -1,21 +1,15 @@
-
 import React from "react";
 import NavComponent from "../NavComponent/NavComponent";
 
 const HeaderComponent = () => {
-  const testAlert = ():void => {
+  const testAlert = (): void => {
     alert("dziala");
-    console.log('Button clicked')
+    console.log("Button clicked");
   };
   return (
     <div>
- 
-  
-
       <div className="bg-white bg-gradient-to-r from-cyan-500 to-blue-50 ... ">
-    
         <div className="relative isolate px-6 pt-14 lg:px-8">
-        
           <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
               <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
@@ -37,8 +31,8 @@ const HeaderComponent = () => {
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
-                role="button"
-                onClick={testAlert}
+                  role="button"
+                  onClick={testAlert}
                   href="#"
                   className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
@@ -53,7 +47,6 @@ const HeaderComponent = () => {
               </div>
             </div>
           </div>
-     
         </div>
       </div>
     </div>

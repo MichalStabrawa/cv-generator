@@ -10,10 +10,10 @@ interface FormData {
   lastName: string;
   email: string;
   country: string;
-  streetAddress: string;
+  streetAddress?: string;
   city: string;
-  region: string;
-  postalCode: string;
+  region?: string;
+  postalCode?: string;
 }
 
 interface GetPersonalDataProps {
@@ -21,17 +21,35 @@ interface GetPersonalDataProps {
 }
 
 export default function Home() {
-  const [formData, setFormData] = useState<FormData | {}>({});
+  const [formData, setFormData] = useState<FormData>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    country: "",
+    streetAddress: "",
+    city: "",
+    region: "",
+    postalCode: "",
+  });
+
+  const formDataIsReady = () => {
+    if (Object.keys(formData).length > 0) {
+      return true;
+    }
+  };
 
   const handleInputChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
-    console.log(e.target.value)
+    const updatedFormData = formDataIsReady() ? { [name]: value } : {};
+
+    // Update formData with the previous data and the new value
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value,
+      ...updatedFormData,
     }));
+  
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
