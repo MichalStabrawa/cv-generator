@@ -1,11 +1,11 @@
 "use client"; // This is a client component
-import React from 'react';
+import React from "react";
 
 interface GetPersonalDataProps {
   change: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
 }
 
-function GetPersonalData({ change }:GetPersonalDataProps) {
+function GetPersonalData({ change }: GetPersonalDataProps) {
   return (
     <main className=" flex-col p-24 bg-gray-50">
       <div>
@@ -22,7 +22,7 @@ function GetPersonalData({ change }:GetPersonalDataProps) {
               <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                 <div className="sm:col-span-3">
                   <label
-                    htmlFor="first-name"
+                    htmlFor="firstName"
                     className="block text-sm font-medium leading-6 text-gray-900"
                   >
                     First name
@@ -31,8 +31,8 @@ function GetPersonalData({ change }:GetPersonalDataProps) {
                     <input
                       onChange={change}
                       type="text"
-                      name="first-name"
-                      id="first-name"
+                      name="firstName"
+                      id="firstName"
                       autoComplete="given-name"
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
@@ -41,7 +41,7 @@ function GetPersonalData({ change }:GetPersonalDataProps) {
 
                 <div className="sm:col-span-3">
                   <label
-                    htmlFor="last-name"
+                    htmlFor="lastName"
                     className="block text-sm font-medium leading-6 text-gray-900"
                   >
                     Last name
@@ -50,8 +50,8 @@ function GetPersonalData({ change }:GetPersonalDataProps) {
                     <input
                       onChange={change}
                       type="text"
-                      name="last-name"
-                      id="last-name"
+                      name="lastName"
+                      id="lastName"
                       autoComplete="family-name"
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
@@ -101,7 +101,7 @@ function GetPersonalData({ change }:GetPersonalDataProps) {
 
                 <div className="col-span-3">
                   <label
-                    htmlFor="street-address"
+                    htmlFor="streetAddress"
                     className="block text-sm font-medium leading-6 text-gray-900"
                   >
                     Street address
@@ -110,9 +110,9 @@ function GetPersonalData({ change }:GetPersonalDataProps) {
                     <input
                       onChange={change}
                       type="text"
-                      name="street-address"
-                      id="street-address"
-                      autoComplete="street-address"
+                      name="streetAddress"
+                      id="streetAddress"
+                      autoComplete="streetAddress"
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
@@ -158,7 +158,7 @@ function GetPersonalData({ change }:GetPersonalDataProps) {
 
                 <div className="sm:col-span-2">
                   <label
-                    htmlFor="postal-code"
+                    htmlFor="postalCode"
                     className="block text-sm font-medium leading-6 text-gray-900"
                   >
                     ZIP / Postal code
@@ -167,9 +167,9 @@ function GetPersonalData({ change }:GetPersonalDataProps) {
                     <input
                       onChange={change}
                       type="text"
-                      name="postal-code"
-                      id="postal-code"
-                      autoComplete="postal-code"
+                      name="postalCode"
+                      id="postalCode"
+                      autoComplete="postalCode"
                       className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
