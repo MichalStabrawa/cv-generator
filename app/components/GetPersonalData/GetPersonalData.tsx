@@ -1,15 +1,16 @@
 "use client"; // This is a client component
-import React from "react";
+import React, { FormEvent } from "react";
 
 interface GetPersonalDataProps {
   change: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
+  submit:(e: FormEvent<HTMLFormElement>)=>void;
 }
 
-function GetPersonalData({ change }: GetPersonalDataProps) {
+function GetPersonalData({ change,submit }: GetPersonalDataProps) {
   return (
     <main className=" flex-col p-24 bg-gray-50">
       <div>
-        <form>
+        <form onSubmit={submit}>
           <div className="space-y-12">
             <div className="border-b border-gray-900/10 pb-12">
               <h2 className="text-base text-2xl font-semibold leading-7 text-gray-900">
