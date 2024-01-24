@@ -1,5 +1,6 @@
 "use client"; // This is a client component
 import React, { FormEvent } from "react";
+import { useAppContext } from "@/app/store/AppContext";
 
 interface GetPersonalDataProps {
   change: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
@@ -7,6 +8,9 @@ interface GetPersonalDataProps {
 }
 
 function GetPersonalData({ change,submit }: GetPersonalDataProps) {
+  const { state } = useAppContext();
+  const { formData } = state;
+  console.log(formData)
   return (
     <main className=" flex-col p-24 bg-gray-50">
       <div>
@@ -204,6 +208,7 @@ function GetPersonalData({ change,submit }: GetPersonalDataProps) {
             </button>
           </div>
         </form>
+        {formData.city} {formData.firstName}
       </div>
     </main>
   );
