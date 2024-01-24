@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
+import logo from '../../assets/cv.png';
 
 const navigation = [
   { name: "About", href: "#" },
@@ -19,21 +21,15 @@ const NavComponent = () => {
   };
 
   return (
-  
-          <header className="absolute inset-x-0 top-0 z-50">
-
+    <header className="absolute inset-x-0 top-0 z-50">
       <nav
-        className="flex items-center justify-between p-6 lg:px-8 h-14 bg-gradient-to-r from-purple-500 to-pink-500 shadow-md"
+        className="flex items-center justify-between p-6 lg:px-8 h-14 bg-gradient-to-r from-cyan-100 to-blue-100 ... shadow-md"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img
-              className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              alt=""
-            />
+           {/*logo here*/}
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -92,7 +88,7 @@ const NavComponent = () => {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {navigation.map((item,index) => (
+                {navigation.map((item, index) => (
                   <a
                     key={index}
                     href={item.href}
@@ -114,7 +110,7 @@ const NavComponent = () => {
           </div>
         </Dialog.Panel>
       </Dialog>
-  </header>
+    </header>
   );
 };
 
