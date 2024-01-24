@@ -1,5 +1,7 @@
+import NavComponent from "../NavComponent/NavComponent"
+
 const HeaderComponent = ()=> {
-    return <></>
+    return <><NavComponent/></>
 }
 
 export default HeaderComponent
