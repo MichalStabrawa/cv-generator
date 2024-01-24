@@ -1,5 +1,11 @@
-import React from "react";
-function GetPersonalData({ change }) {
+"use client"; // This is a client component
+import React from 'react';
+
+interface GetPersonalDataProps {
+  change: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => void;
+}
+
+function GetPersonalData({ change }:GetPersonalDataProps) {
   return (
     <main className=" flex-col p-24 bg-gray-50">
       <div>
