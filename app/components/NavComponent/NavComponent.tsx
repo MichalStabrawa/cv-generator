@@ -4,16 +4,24 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-    { name: "About", href: "#" },
-    { name: "Lorem", href: "#" },
-    { name: "Lorem", href: "#" },
-    { name: "Company", href: "#" },
-  ];
+  { name: "About", href: "#" },
+  { name: "Lorem", href: "#" },
+  { name: "Lorem", href: "#" },
+  { name: "Company", href: "#" },
+];
 
 const NavComponent = () => {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+
+  const handleMobileNav = () => {
+    setMobileMenuOpen(true);
+    alert("Dziala");
+  };
+
   return (
-    <>
+  
+          <header className="absolute inset-x-0 top-0 z-50">
+
       <nav
         className="flex items-center justify-between p-6 lg:px-8 h-14 bg-gradient-to-r from-purple-500 to-pink-500 shadow-md"
         aria-label="Global"
@@ -32,16 +40,16 @@ const NavComponent = () => {
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            onClick={() => setMobileMenuOpen(true)}
+            onClick={handleMobileNav}
           >
             <span className="sr-only">Open main menu</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item) => (
+          {navigation.map((item, index) => (
             <a
-              key={item.name}
+              key={index}
               href={item.href}
               className="text-sm font-semibold leading-6 text-gray-900"
             >
@@ -84,9 +92,9 @@ const NavComponent = () => {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {navigation.map((item) => (
+                {navigation.map((item,index) => (
                   <a
-                    key={item.name}
+                    key={index}
                     href={item.href}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
@@ -106,7 +114,7 @@ const NavComponent = () => {
           </div>
         </Dialog.Panel>
       </Dialog>
-    </>
+  </header>
   );
 };
 

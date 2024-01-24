@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+input {
+    border:1px solid red;
+    color:#000;
+}

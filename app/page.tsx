@@ -1,23 +1,26 @@
 "use client"; // This is a client component
 import { useState, useEffect } from "react";
 import HeaderComponent from "./components/HeaderComponent/HeaderComponent";
-
-
+import Test from "./components/Test/Test";
+import NavComponent from "./components/NavComponent/NavComponent";
 type NameProps = {
   name: string;
   surname: string;
   email: string;
 };
 
-
-
 export default function Home() {
   const [name, setName] = useState<string[]>();
 
+  const showAlert = () => {
+    console.log("Alert");
+  };
 
   return (
-    <>
-     <HeaderComponent/>
+    <div>
+      <div>   <NavComponent/></div>
+  
+      <HeaderComponent/>
       <main className=" flex-col p-24 bg-gray-50">
         <div>
           <form>
@@ -40,6 +43,7 @@ export default function Home() {
                     </label>
                     <div className="mt-2">
                       <input
+                        onChange={() => console.log("Dziala")}
                         type="text"
                         name="first-name"
                         id="first-name"
@@ -207,7 +211,10 @@ export default function Home() {
             </div>
           </form>
         </div>
+        <button name="btn2" onClick={showAlert}>???</button>
       </main>
-    </>
+      <button className="cursor-pointer"  onClick={showAlert}>Click me</button> <input type="text" onChange={()=>console.log('Change')} placeholder="asdasdsa" />
+      <Test/>
+    </div>
   );
 }
