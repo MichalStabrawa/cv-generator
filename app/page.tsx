@@ -183,7 +183,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <main className=" flex-col p-24">
+      <main className=" flex-col p-24 bg-gray-50">
         <div>
           <form>
             <div className="space-y-12">
