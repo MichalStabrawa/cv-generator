@@ -2,7 +2,7 @@
 import React from 'react';
 
 interface GetPersonalDataProps {
-  change: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => void;
+  change: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
 }
 
 function GetPersonalData({ change }:GetPersonalDataProps) {
