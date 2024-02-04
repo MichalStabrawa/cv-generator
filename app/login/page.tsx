@@ -1,6 +1,6 @@
 "use client";
 import { useState, ChangeEvent } from "react";
-
+import classes from "./page.module.scss";
 export default function Login() {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -15,7 +15,9 @@ export default function Login() {
   };
 
   return (
-    <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+    <div
+      className={`${classes.login} login flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8`}
+    >
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <img
           className="mx-auto h-10 w-auto"
@@ -69,7 +71,7 @@ export default function Login() {
             </div>
             <div className="mt-2">
               <input
-              onChange={handleInput}
+                onChange={handleInput}
                 id="password"
                 name="password"
                 type="password"
